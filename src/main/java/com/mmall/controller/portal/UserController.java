@@ -72,8 +72,8 @@ public class UserController {
 
     @RequestMapping(value = "forget_check_answer", method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse<String> forgetCheckAnswer(String username, String quesion, String answer) {
-        return iUserService.checkAnswer(username, quesion, answer);
+    public ServerResponse<String> forgetCheckAnswer(String username, String question, String answer) {
+        return iUserService.checkAnswer(username, question, answer);
     }
 
     @RequestMapping(value = "forget_reset_password", method = RequestMethod.POST)
@@ -110,7 +110,7 @@ public class UserController {
 
     @RequestMapping(value = "get_information", method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse<User> get_infomation(HttpSession session) {
+    public ServerResponse<User> get_information(HttpSession session) {
         User currentUser = (User) session.getAttribute(Const.CURRENT_USER);
         if (currentUser == null) {
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(), "未登录,请登录");
