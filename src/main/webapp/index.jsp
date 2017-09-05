@@ -1,7 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<title>
-    <meta charset="utf-8"/>
-</title>
+<head>
+</head>
 <body>
 <h2>SpringMVC 上传文件</h2>
 
