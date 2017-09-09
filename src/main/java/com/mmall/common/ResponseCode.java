@@ -24,4 +24,10 @@ public enum ResponseCode {
     public String getDesc(){
         return this.desc;
     }
+
+    public static void main(String[] args) {
+        for (ResponseCode rc : values()) {
+            System.out.println(rc);
+        }
+    }
 }
